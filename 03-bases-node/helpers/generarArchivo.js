@@ -3,7 +3,7 @@ const fs = require('fs');
 const crearArchivo = async (nombre, texto) => {
     try{
         console.log(`${ nombre } creada exitosamente`);
-        await fs.writeFileSync(nombre, texto)
+        await fs.writeFileSync(`./archivos/${nombre}`, texto)
 
         return nombre;
 

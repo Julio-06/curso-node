@@ -1,0 +1,4 @@
+#ignora todos archivos generados
+
+archivos/
+node_modules/
