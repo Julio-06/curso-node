@@ -1,4 +1,3 @@
 #ignora todos archivos generados
-
-archivos/*.txt
+/archivos/*.txt
 node_modules/
