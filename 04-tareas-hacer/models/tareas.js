@@ -11,6 +11,12 @@ class Tareas {
         this._listado[tarea.id] = tarea;
     }
 
+    cargarTareasFromArray(tareas = []){
+        tareas.forEach(tarea => {
+            this._listado[tarea.id] = tarea;
+        });
+    }
+
     get listadoArr(){
         const listado = [];
 
@@ -18,8 +24,7 @@ class Tareas {
 
         return listado;
     }
-
-    
+  
 }
 
 module.exports = Tareas;
