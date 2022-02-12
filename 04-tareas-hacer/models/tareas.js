@@ -30,7 +30,13 @@ class Tareas {
         return this.listadoArr.filter(tarea => tarea.estado == completada);
             
     }
-    
+
+    borrarTarea(id = ''){
+        if(this._listado[id]){
+            delete this._listado[id];
+        }
+    }
+
     get listadoArr(){
         const listado = [];
 
