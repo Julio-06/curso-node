@@ -17,16 +17,20 @@ class Tareas {
         });
     }
 
-    listadoCompleto(){
-        this.listadoArr.forEach((tarea, i) =>{
+    listarTareas(tareas = this.listadoArr){
+        tareas.forEach((tarea, i) =>{
             const idx = `${i + 1}`.green;
-            const { desc, completadoEn } = tarea;
-            const estado = completadoEn ? 'Completada'.green : 'Pendiente'.red;
+            const { desc, estado } = tarea;
 
-            console.log(`${ idx } ${ desc } :: ${ estado }`);
+            console.log(`${ idx } ${ desc } :: ${ estado ? 'Completada'.green : 'Pendiente'.red }`);
         });
     }
 
+    clasificarTareas(completada = true){
+        return this.listadoArr.filter(tarea => tarea.estado == completada);
+            
+    }
+    
     get listadoArr(){
         const listado = [];
 

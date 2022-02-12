@@ -23,8 +23,15 @@ const main = async () => {
                 tareas.crearTarea(desc);
                 break;
             case '2':
-                tareas.listadoCompleto()
+                tareas.listarTareas()
                 break;
+            case '3':
+                tareas.listarTareas(tareas.clasificarTareas(true))
+                break;
+            case '4':
+                tareas.listarTareas(tareas.clasificarTareas(false))
+                break;
+
         }
 
         guardarDB(tareas.listadoArr);
